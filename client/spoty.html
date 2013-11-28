@@ -1,0 +1,29 @@
+<head>
+  <title>spoty</title>
+
+</head>
+
+<body>
+<div class="login">
+            {{loginButtons}}
+</div>
+<br>
+  {{> displaypage}}
+</body>
+
+
+
+<template name="displaypage">
+  {{#each displaypage}}
+  <iframe src="https://embed.spotify.com/?uri={{song}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  {{/each}}
+</template>
+<template name="loading">
+  <div class="loading">Loading your playlists...</div>
+</template>
+<template name="me">
+  <p>Message: <input type="text" id="message"></p>
+  {{#each displaypage}}
+  <iframe src="https://embed.spotify.com/?uri={{song}}" width="300" height="380" class="playlists" frameborder="0" allowtransparency="true"></iframe>
+  {{/each}}
+</template>
